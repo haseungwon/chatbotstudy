@@ -25,7 +25,7 @@ def message(request):
         return JsonResponse(
             { 
             "message": {
-                "text": "안녕하십니까~~~"
+                "text": weather()
             }
         }
         )
@@ -45,4 +45,10 @@ def message(request):
             }
         }
         )
+def weather(response):
+    return state(
+        params = {"version": "1", "city":"서울", "county":"광진구","village":"군자동"}
+        headers = {"appKey": "a88bad75-0102-430d-adc9-1d555674a640"}
+        return_response = requests.get("https://api2.sktelecom.com/weather/current/minutely", params=params, headers=headers)
+    )
 
