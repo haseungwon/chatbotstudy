@@ -29,7 +29,7 @@ def message(request):
             }
         }
         )
-     if return_str == '선택 2':
+    if return_str == '선택 2':
         return JsonResponse(
             { 
             "message": {
@@ -37,7 +37,7 @@ def message(request):
             }
         }
         )
-     if return_str == '선택 3':
+    if return_str == '선택 3':
         return JsonResponse(
             { 
             "message": {
@@ -45,3 +45,4 @@ def message(request):
             }
         }
         )
+
