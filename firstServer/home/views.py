@@ -50,5 +50,10 @@ def weather(response):
         headers = {"appKey": "a88bad75-0102-430d-adc9-1d555674a640"}
         return_response = requests.get("https://api2.sktelecom.com/weather/current/minutely", params=params, headers=headers)
         data = json.loads(return_resonse.text)
-        return data
-
+        weather = data["weather"]["minutely"]
+        sky = weather[0]["sky"]["name"]
+        wind = weather[0]["wind"]["wspd"]
+        temp = weather[0]["temperature"]["tc"]
+        time = weather[0]["timeObservation"]
+        printweather = '하늘 : ' + sky + '\n' + '온도 : ' + temp + 'C\n' + '풍속 : ' + wind + 'm/s'
+        return printweather
