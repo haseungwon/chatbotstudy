@@ -22,7 +22,9 @@ def message(request):
     return_str = return_json_str['content'] #버튼 항목중 무엇을 눌렀는가
 
     if return_str == '선택 1':
-        return JsonResponse({ #return 밑에는 공통어
+        return JsonResponse(
+            { #return 밑에는 공통어
             "message": {
                 "text": "안녕하십니까~~~"
             }
+        }
