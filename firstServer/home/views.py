@@ -29,3 +29,19 @@ def message(request):
             }
         }
         )
+     if return_str == '선택 2':
+        return JsonResponse(
+            { 
+            "message": {
+                "text": "너가 원하는건 뭘까요~~~ "
+            }
+        }
+        )
+     if return_str == '선택 3':
+        return JsonResponse(
+            { 
+            "message": {
+                "text":"그걸 내가 알면 무당을 했죠~~~"
+            }
+        }
+        )
